@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 import os
+from projeto.models.Endereco import Endereco
 from projeto.models.enum.UnidadeFederativa import UnidadeFederativa
 from projeto.models.enum.Sexo import Sexo
 from projeto.models.enum.EstadoCivil import EstadoCivil
