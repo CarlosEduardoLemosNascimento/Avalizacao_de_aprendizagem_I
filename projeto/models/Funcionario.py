@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 from models.Fisica import Fisica
 from models.enum.Setor import Setor
 

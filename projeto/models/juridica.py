@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 from models.Pessoa import Pessoa
 
 class Juridica(Pessoa):
