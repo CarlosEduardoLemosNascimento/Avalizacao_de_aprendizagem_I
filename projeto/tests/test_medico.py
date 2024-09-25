@@ -6,6 +6,7 @@ from projeto.models.enum.EstadoCivil import EstadoCivil
 from projeto.models.enum.UnidadeFederativa import UnidadeFederativa
 from projeto.models.enum.Setor import Setor
 
+@pytest.fixture
 def test_medico_crm_vazio():
     endereco = Endereco("Rua H", "321", "Apto 101", "76543-210", "Cidade H", UnidadeFederativa.BAHIA)
     with pytest.raises(ValueError, match="CRM inválido: o CRM não pode ser vazio."):

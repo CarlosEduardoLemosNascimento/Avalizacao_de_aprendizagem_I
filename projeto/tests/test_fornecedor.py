@@ -3,6 +3,7 @@ from projeto.models.fornecedor import Fornecedor
 from projeto.models.Endereco import Endereco
 from projeto.models.enum.UnidadeFederativa import UnidadeFederativa
 
+@pytest.fixture
 def test_fornecedor_cnpj_invalido():
     endereco = Endereco("Rua E", "123", "Loja A", "65432-198", "Cidade E", UnidadeFederativa.SAO_PAULO)
     with pytest.raises(ValueError, match="CNPJ inválido: deve ter 14 caracteres."):

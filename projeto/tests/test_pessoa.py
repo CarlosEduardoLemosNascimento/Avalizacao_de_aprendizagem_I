@@ -3,6 +3,7 @@ from projeto.models.Pessoa import Pessoa
 from projeto.models.Endereco import Endereco
 from projeto.models.enum.UnidadeFederativa import UnidadeFederativa
 
+@pytest.fixture
 def test_pessoa_nome_vazio():
     endereco = Endereco("Rua A", "123", "", "12345-678", "Cidade A", UnidadeFederativa.BAHIA)
     with pytest.raises(ValueError, match="Nome inválido: o nome não pode ser vazio."):

@@ -6,6 +6,7 @@ from projeto.models.enum.EstadoCivil import EstadoCivil
 from projeto.models.enum.UnidadeFederativa import UnidadeFederativa
 from projeto.models.enum.Setor import Setor
 
+@pytest.fixture
 def test_engenheiro_crea_vazio():
     endereco = Endereco("Rua G", "123", "Casa 1", "56789-012", "Cidade G", UnidadeFederativa.SAO_PAULO)
     with pytest.raises(ValueError, match="CREA inválido: o CREA não pode ser vazio."):

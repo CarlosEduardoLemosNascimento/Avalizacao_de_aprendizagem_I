@@ -4,6 +4,7 @@ from projeto.models.enum.Sexo import Sexo
 from projeto.models.enum.EstadoCivil import EstadoCivil
 from projeto.models.enum.UnidadeFederativa import UnidadeFederativa
 
+@pytest.fixture
 def test_cliente_protocolo_invalido():
     endereco = Endereco("Rua D", "321", "Apto 201", "98765-432", "Cidade D", UnidadeFederativa.BAHIA)
     with pytest.raises(ValueError, match="Protocolo de atendimento inválido."):

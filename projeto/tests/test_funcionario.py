@@ -6,6 +6,7 @@ from projeto.models.enum.EstadoCivil import EstadoCivil
 from projeto.models.enum.UnidadeFederativa import UnidadeFederativa
 from projeto.models.enum.Setor import Setor
 
+@pytest.fixture
 def test_funcionario_cpf_invalido():
     endereco = Endereco("Rua B", "456", "Apto 101", "12345-678", "Cidade B", UnidadeFederativa.SAO_PAULO)
     with pytest.raises(ValueError, match="CPF inválido: deve ter 11 caracteres."):

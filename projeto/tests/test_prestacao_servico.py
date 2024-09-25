@@ -1,6 +1,7 @@
 import pytest
 from projeto.models.prestacao_servico import PrestacaoServico
 
+@pytest.fixture
 def test_prestacao_servico_data_invalida():
     with pytest.raises(ValueError, match="Data inválida: formato incorreto, use YYYY-MM-DD."):
         PrestacaoServico("2023-15-01", "2023-12-31")
