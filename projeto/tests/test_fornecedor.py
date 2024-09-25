@@ -11,4 +11,4 @@ def test_fornecedor_cnpj_invalido():
 def test_fornecedor_produto_vazio():
     endereco = Endereco("Rua F", "789", "Sala 3", "12345-000", "Cidade F", UnidadeFederativa.RIO_DE_JANEIRO)
     with pytest.raises(ValueError, match="Produto inválido: o produto fornecido não pode ser vazio."):
-        Fornecedor(5, "Loja Y", "77777-4444", "lojay@example.com", endereco, "12345678901234", "654321", "")
+        Fornecedor(5, "Loja Y", "77777-4444", "lojay@email.com", endereco, "12345678901234", "654321", "")

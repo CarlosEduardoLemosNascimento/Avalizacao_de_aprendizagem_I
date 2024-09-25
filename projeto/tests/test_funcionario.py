@@ -14,4 +14,4 @@ def test_funcionario_cpf_invalido():
 def test_funcionario_salario_negativo():
     endereco = Endereco("Rua C", "789", "Casa 2", "12345-678", "Cidade C", UnidadeFederativa.RIO_DE_JANEIRO)
     with pytest.raises(ValueError, match="Salário inválido: o salário não pode ser negativo."):
-        Funcionario(2, "José", "99999-7777", "jose@example.com", endereco, Sexo.MASCULINO, EstadoCivil.CASADO, "1985-10-12", "12345678910", "12345678", "5678", Setor.SAUDE, -1000)
+        Funcionario(2, "José", "99999-7777", "jose@email.com", endereco, Sexo.MASCULINO, EstadoCivil.CASADO, "1985-10-12", "12345678910", "12345678", "5678", Setor.SAUDE, -1000)
